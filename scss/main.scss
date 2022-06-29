@@ -1,0 +1,294 @@
+@import "base/global";
+@import "base/categorias";
+@import "base/contacto";
+@import "base/slider";
+@import "base/productos";
+@import "base/nosotros";
+
+.logo{
+    width:200px;
+    height:40px;
+    padding-top: 5px;
+}
+
+header{
+    position:fixed;
+    top:0;
+    width:100%;
+}
+
+.wrapper{
+    background-color: #fff;
+    padding-top: 100px;
+    padding-bottom:100px;
+}
+
+
+// Nesting //
+
+nav{
+    @include caja-flex(space-between, center, nowrap);
+
+    ul{
+        display:flex;
+        padding:0;
+
+        a{
+            padding: 10px;
+            font-size: 1.6rem;
+            font-weight:bold;
+        }
+
+        a:hover{
+            color:rgb(75, 6, 132);
+            transform: scale(1.1);
+        }
+    }
+}
+
+.presentacion{
+    
+    text-align: center;
+    
+    padding-top: 200px;
+    padding-bottom:50px;
+    @include caja-flex(space-between, center, nowrap);
+
+    .flex-item2{
+        text-align:center;
+        background: url('../img/fond.jpg');
+    }
+
+    h1{
+        margin-top:0;
+        padding-right: 20px;
+        font-size: $font-h1;
+        
+    }
+
+    p{
+        padding-right: 20px;
+        padding-bottom: 10px;
+    }
+}
+
+.presentacion2{
+    
+    padding-top: 50px;
+    padding-bottom:25px;
+    @include caja-flex(space-between, center, nowrap);
+    background-color: #fff;
+
+    .flex-item4{
+        text-align:center;
+    }
+
+    h2{
+        margin-top:0;
+        padding-right: 20px;
+        font-size: $font-h1;
+        color: rgb(75, 6, 132);
+    }
+
+    p{
+        padding-right: 20px;
+        padding-bottom: 10px;
+        color: black;
+    }
+}
+
+.servicios{
+    div{
+        text-align: center;
+        padding: 1px;
+    }
+}
+
+footer{
+    min-height: 80px;
+    background-color: rgb(52, 53, 51);
+    margin-top: 0;
+    .footer-content{
+        text-align:center;
+        padding-top:30px;
+        padding-bottom:30px;
+    }
+}
+
+@import 'base/medios';
+
+
+// Complemento-del-banner
+
+.about {
+    text-align: center;
+}
+
+.subtitle {
+    color: var(--color-title);
+    font-size: 2rem;
+    margin-bottom: 25px;
+}
+
+
+.about__paragraph {
+    line-height: 1.7;
+}
+
+.about__main {
+    padding-top: 80px;
+    display: grid;
+    width: 90%;
+    margin: 0 auto;
+    gap: 1em;
+    overflow: hidden;
+    grid-template-columns: repeat(auto-fit, minmax(260px, auto));
+}
+
+
+.about__icons {
+    background-color: rgba(255, 255, 255, 0.575);
+    display: grid;
+    gap: 1em;
+    justify-items: center;
+    width: 260px;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-bottom: 7rem;
+    padding-top: 15px;
+    border-radius: 2rem;
+}
+
+.about__icon {
+    width: 240px;
+}
+
+
+// Anuncio 
+
+.knowledge {
+    background-color: #fff;
+    background-position: 0 0, 10px 10px;
+    overflow: hidden;
+    color: rgb(0, 0, 0);
+}
+
+.knowledege__texts{
+    color: black;
+    text-align: center;
+}
+
+.knowledge__paragraph{
+    color: black;
+    text-align: center;
+    padding-left: 30px;
+}
+.knowledge__container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+    align-items: center;
+}
+
+.knowledge__picture{
+    max-width: 500px;
+}
+
+.knowledge__paragraph{
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.knowledge__img{
+    width: 100%;
+    display: block;
+}
+
+
+// /Anuncio 
+
+// Suscripción
+
+
+.subtitle-sus{
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.price{
+    text-align: center;
+}
+
+.price__table{
+    padding-top: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5em;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.price__element{
+    background-color: #e5e5f7;
+    text-align: center;
+    border-radius: 10px;
+    width: 330px;
+    padding: 40px;
+    --color-plan: #696871;
+    --color-price: #1D293F;
+    --bg-cta: #fff;
+    --color-cta: rgb(75, 6, 132);
+    --color-items: #696871;
+}
+
+.price__element--best{
+    width: 370px;
+    padding: 60px 40px;
+    background-color: rgb(75, 6, 132);
+    --color-plan: rgb(255 255 255 / 75%);
+    --color-price: #fff;
+    --bg-cta: #f82424;
+    --color-cta: #FFF;
+    --color-items: #fff;
+}
+
+
+.price__name{
+    color: $color_element;
+    margin-bottom: 15px;
+    font-weight: 300;
+}
+
+.price__features{
+    color: black;
+}
+
+.price__price{
+    font-size: 2.5rem;
+    color: var(--color-price);
+}
+
+.price__items{
+    margin-top: 35px;
+    display: grid;
+    gap: 1em;
+    font-weight: 300;
+    font-size: 1.2rem;
+    margin-bottom: 50px;
+    color: var(--color-items);
+}
+
+.price__cta{
+    display: block;
+    padding: 20px 0;
+    border-radius: 10px;
+    text-decoration: none;
+    background-color: var(--bg-cta);
+    font-weight: 600;
+    color: var(--color-cta);
+    box-shadow: 0 0 1px rgba(0, 0, 0, .5);
+    font-size:x-large;
+    text-transform: uppercase;
+}
+// /Suscripción 
